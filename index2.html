@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example {
+          padding: 10px;
+          border: 1px solid #000;
+        }
+        .highlight {
+          background-color: yellow;
+        }
+        .hidden {
+          display: none;
+        }
+        .dashed_border {
+          padding: 7px;
+          border: 3px dashed #CCC;
+        }
+        </style>
+</head>
+<body>
+   
+        
+        <div id="myElement" class="example">Hello, modify my classes!</div>
+        <button id="addButton">Add Class</button>
+        <button id="removeButton">Remove Class</button>
+        <button id="toggleButton">Toggle Class</button>
+        <button id="containsButton">Check Class</button>
+        <button id="replaceButton">Replace Class</button>
+        
+        <script>
+          // Get references to the buttons and the element
+          const myElement = document.getElementById('myElement');
+          const addButton = document.getElementById('addButton');
+          const removeButton = document.getElementById('removeButton');
+          const toggleButton = document.getElementById('toggleButton');
+          const containsButton = document.getElementById('containsButton');
+          const replaceButton = document.getElementById('replaceButton');
+        
+          // Add event listener to add class
+          addButton.addEventListener('click', function() {
+            myElement.classList.add('highlight');
+          });
+        
+          // Add event listener to remove class
+          removeButton.addEventListener('click', function() {
+            myElement.classList.remove('highlight');
+          });
+        
+          // Add event listener to toggle class
+          toggleButton.addEventListener('click', function() {
+            myElement.classList.toggle('hidden');
+          });
+        
+          // Add event listener to check if class exists
+          containsButton.addEventListener('click', function() {
+            const containsHighlight = myElement.classList.contains('highlight');
+          });
+        
+          // Add event listener to replace class
+          replaceButton.addEventListener('click', function() {
+            myElement.classList.replace('example', 'dashed_border');
+          });
+        </script>
+        
+
+    
+      
+</body>
+</html>
